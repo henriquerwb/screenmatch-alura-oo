@@ -1,13 +1,9 @@
-import br.com.alura.ScreenMatchOO.modelos.*;
-import br.com.alura.ScreenMatchOO.modelos.Aluno;
+import br.com.alura.ScreenMatchOO.modelos.TvShow;
 
 public class App {
     public static void main(String[] args) {
-        Livro senhorDosAneis = new Livro();
-
-        senhorDosAneis.setAutor("Tolkien");
-        senhorDosAneis.setTitulo("Senhor dos Anéis");
-
-        senhorDosAneis.exibirDetalhes();
+        TvShow house = new TvShow();
+        house.setNome("House M.D.");
+        house.setAnoLancamento(2004);
     }
 }
