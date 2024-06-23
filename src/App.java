@@ -1,4 +1,6 @@
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
+import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
+import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.TvShow;
 
@@ -18,11 +20,25 @@ public class App {
         interstellar.setAnoLancamento(2014);
         interstellar.setDuracaoEmMinutos(169);
         interstellar.setIncluidoNoPlano(true);
+        interstellar.avalia(8);
+        interstellar.avalia(9);
+        interstellar.avalia(10);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
         calculadora.inclui(interstellar);
         calculadora.inclui(house);
         System.out.println(calculadora.getTempoTotal());
+
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(interstellar);
+
+        Episodio episodio = new Episodio();
+        episodio.setNome("Piloto");
+        episodio.setNumero(1);
+        episodio.setTvshow(house);
+        episodio.setTotalVisualizacoes(500);
+        filtro.filtra(episodio);
 
     }
 }
