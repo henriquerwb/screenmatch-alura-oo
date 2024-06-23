@@ -1,4 +1,4 @@
-package br.com.alura.ScreenMatchOO.modelos;
+package br.com.alura.screenmatch.modelos;
 
 public class TvShow extends Title{
     private int seasons;
@@ -36,5 +36,10 @@ public class TvShow extends Title{
 
     public void setMinutesPerEpisode(int minutesPerEpisode) {
         this.minutesPerEpisode = minutesPerEpisode;
+    }
+
+    @Override
+    public int getDuracaoEmMinutos() {
+        return seasons * episodesPerSeason * minutesPerEpisode;
     }
 }

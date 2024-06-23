@@ -1,4 +1,4 @@
-package br.com.alura.ScreenMatchOO.modelos;
+package br.com.alura.screenmatch.modelos;
 
 public class Title {
     String nome;
@@ -17,6 +17,10 @@ public class Title {
     public void avalia(double nota) {
         somaAvaliacoes+= nota;
         totalDeAvaliacoes++;
+    }
+
+    public double retornaMedia() {
+        return somaAvaliacoes / totalDeAvaliacoes;
     }
 
     public double calculaMedia() {
